@@ -271,7 +271,7 @@ pp1 <- predict(m1, newdata = data.frame(x = xx1), interval = "confidence")
 .center[
 
 ```{r anova-polynomial-data, echo = FALSE, fig.width = 8}
-plot(x, y, main = "Data", col = "red")
+plot(x, y, main = "Data", col = "purple", cex = 1.5, lwd = 2)
 ```
 
 ]
@@ -305,7 +305,7 @@ plotCI(xx0, pp0[, "fit"],
 .center[
 
 ```{r anova-polynomial-data2, echo = FALSE, fig.width = 8}
-plot(x, y, main = "Data", col = "red")
+plot(x, y, main = "Data", col = "purple", cex = 1.5, lwd = 2)
 ```
 
 ]
@@ -345,7 +345,7 @@ Typical trade-off: **bias** vs **variance**
 .center[
 
 ```{r anova-polynomial-data3, echo = FALSE, fig.width = 8}
-plot(x, y, main = "Data", col = "red")
+plot(x, y, main = "Data", col = "purple", cex = 1.5, lwd = 2)
 ```
 
 ]
