@@ -23,17 +23,6 @@ output:
 </style>
 
 
-# Collaborators
-
-* Margarita Moreno-Betancur
-* John Carlin
-* Sue Finch
-* Ian Gordon
-* Lyle Gurrin
-
-
----
-
 # Student's predicament
 
 $X_i \sim \mathrm{N}(\mu_1, \sigma_1^2)$
