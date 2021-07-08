@@ -1,0 +1,157 @@
+---
+title: "Steering students past the 'true model myth'"
+subtitle: "OZCOTS 2021"
+author: "Damjan Vukcevic"
+date: "9 July 2021"
+#institute: "University of Melbourne"
+institute: "...with Margarita Moreno-Betancur, John Carlin, Sue Finch, Ian Gordon & Lyle Gurrin"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    css: [default, metropolis, metropolis-fonts]
+
+
+---
+
+# Collaborators
+
+* Margarita Moreno-Betancur
+* John Carlin
+* Sue Finch
+* Ian Gordon
+* Lyle Gurrin
+
+(Verbally mention 'disclaimer' that this talk presents ideas that are
+a starting point for discussion, rather than the outcome of a thorough
+investigation)
+
+
+---
+
+# Student's predicament
+
+(Show the t-test example)
+
+
+---
+
+# The 'true model myth'
+
+--
+
+Analysis process:
+
+1. Determine the best model
+2. Derive (all of the) answers from this model
+
+--
+
+Implicit assumptions:
+
+* Our goal is to find the 'true' model
+* We can use our 'best' model as if it were the 'true' model
+
+
+---
+
+# Wider context
+
+(Mention the misuse of statistical significance, 'dichotomania', the
+'replicability crisis', etc.?)
+
+
+---
+
+# Antidotes
+
+(The idea of a 'statistical investigation')
+
+(Link to Robert Gould's keynote talk, and other references)
+
+
+---
+
+# All models are wrong...
+
+Models are a set of assumptions
+
+We don't know what which assumptions are 'true'
+
+A statistical investigation will typically investigate *multiple* models
+
+
+---
+
+# Reasons for using multiple models
+
+1. Comparing & optimising performance
+2. Exploring different assumptions
+3. Exploring different questions
+4. Varying the desired estimation properties
+
+
+---
+
+# Comparing & optimising performance
+
+Routinely done as part of *predictive modelling*
+
+(Example: table or figure comparing multiple models; perhaps an ROC plot)
+
+
+---
+
+# Exploring different assumptions
+
+(Example: go back to the t-test example)
+
+(Example: varying prior in a Bayesian analysis, refer to my OZCOTS talk from earlier in the day)
+
+(Example: Margarita's causal inference example, 'progressive adjustment approach')
+
+(Mention other common sensitivity analyses, e.g. exploring different ways to
+deal with missing data)
+
+
+---
+
+# Exploring different questions
+
+(Example: Ian's example, binary vs ordinal logistic regression)
+
+(Example: Sue's example, ANOVA vs polynomial regression)
+
+
+---
+
+# Varying the desired estimation properties
+
+Bias vs variance
+
+(Example, again: Sue's example, ANOVA vs polynomial regression.  Use this to
+explain the distinction between the last two reasons for using multiple models.)
+
+(Example: partial pooling / hierarchical model, perhaps the 8 schools example?)
+
+
+---
+
+# Suggestions and questions
+
+(suggest an empirical investigation of whether students do in fact think about
+statistics in terms of the 'true model myth')
+
+(...incl. connect with Ian's talk about 'unreferenced practices')
+
+---
+
+# Summary
+
+(Could flash up the 4 reasons here, to act as a summary)
+
+(Can cull this slide if there are too many)
