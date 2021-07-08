@@ -96,20 +96,13 @@ See:
 * [Wild & Pfannkuch (1999)](https://doi.org/10.1111/j.1751-5823.1999.tb00442.x)
 * **Robert Gould**'s keynote talk yesterday, mentioned 'The Data Cycle'
 
+--
 
----
-
-# All models are wrong...
+A statistical investigation will typically investigate **multiple** models
 
 --
 
-Models are a set of assumptions
-
-We don't know what which assumptions are 'true'
-
---
-
-A statistical investigation will typically investigate *multiple* models
+Let's show such examples to students!
 
 
 ---
@@ -374,16 +367,11 @@ Create examples that feature **multiple** models/techniques.
 
 --
 
+### Handy reference
+
 Possible reasons for using multiple models:
 
 1. Comparing & optimising performance
 2. Exploring different assumptions
 3. Exploring different questions
 4. Varying the desired estimation properties
-
---
-
-## Further work
-
-How prevalent is the 'true model myth' amongst students?  
-(Empirical investigation required...)
