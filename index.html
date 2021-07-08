@@ -21,6 +21,13 @@ class: center, middle, inverse, title-slide
 ---
 
 
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+    font-size: 24px;
+}
+&lt;/style&gt;
+
+
 # Collaborators
 
 * Margarita Moreno-Betancur
@@ -29,16 +36,30 @@ class: center, middle, inverse, title-slide
 * Ian Gordon
 * Lyle Gurrin
 
-(Verbally mention 'disclaimer' that this talk presents ideas that are
-a starting point for discussion, rather than the outcome of a thorough
-investigation)
-
 
 ---
 
 # Student's predicament
 
-(Show the t-test example)
+`\(X_i \sim \mathrm{N}(\mu_1, \sigma_1^2)\)`
+
+`\(Y_j \sim \mathrm{N}(\mu_2, \sigma_2^2)\)`
+
+--
+
+Want to compare `\(\mu_1\)` and `\(\mu_2\)`
+
+--
+
+Can we assume `\(\sigma_1 = \sigma_2\)`?
+
+--
+
+In R, which of these should we run?
+```
+t.test(x, y)
+t.test(x, y, var.equal = TRUE)
+```
 
 
 ---
@@ -59,31 +80,39 @@ Implicit assumptions:
 * Our goal is to find the 'true' model
 * We can use our 'best' model as if it were the 'true' model
 
+--
 
----
-
-# Wider context
-
-(Mention the misuse of statistical significance, 'dichotomania', the
-'replicability crisis', etc.?)
+(Similar to misuse of statistical significance?  
+ An overly 'black and white' view of the data?  
+ Ignores model uncertainty...)
 
 
 ---
 
 # Antidotes
 
-(The idea of a 'statistical investigation')
 
-(Link to Robert Gould's keynote talk, and other references)
+The idea of a 'statistical investigation'
+
+--
+
+See:
+
+* [Wild &amp; Pfannkuch (1999)](https://doi.org/10.1111/j.1751-5823.1999.tb00442.x)
+* **Robert Gould**'s keynote talk yesterday, mentioned 'The Data Cycle'
 
 
 ---
 
 # All models are wrong...
 
+--
+
 Models are a set of assumptions
 
 We don't know what which assumptions are 'true'
+
+--
 
 A statistical investigation will typically investigate *multiple* models
 
@@ -100,64 +129,203 @@ A statistical investigation will typically investigate *multiple* models
 
 ---
 
-# Comparing &amp; optimising performance
+# 1. Comparing &amp; optimising performance
 
-Routinely done as part of *predictive modelling*
+--
 
-(Example: table or figure comparing multiple models; perhaps an ROC plot)
-
-
----
-
-# Exploring different assumptions
-
-(Example: go back to the t-test example)
-
-(Example: varying prior in a Bayesian analysis, refer to my OZCOTS talk from earlier in the day)
-
-(Example: Margarita's causal inference example, 'progressive adjustment approach')
-
-(Mention other common sensitivity analyses, e.g. exploring different ways to
-deal with missing data)
+Routinely done for **predictive modelling**
 
 
 ---
 
-# Exploring different questions
+# Example: species distribution modelling
 
-(Example: Ian's example, binary vs ordinal logistic regression)
+![](images/mee313496-fig-0002-m-modified.png)
 
-(Example: Sue's example, ANOVA vs polynomial regression)
+.footnote[
+.font70[
+Adapted from [Ingram, Vukcevic &amp; Golding (2020)](https://doi.org/10.1111/2041-210X.13496)
+]
+]
+
+---
+
+# 2. Exploring different assumptions
+
+--
+
+Common scenario: **sensitivity analyses**
 
 
 ---
 
-# Varying the desired estimation properties
+# Example: t-test
 
-Bias vs variance
 
-(Example, again: Sue's example, ANOVA vs polynomial regression.  Use this to
-explain the distinction between the last two reasons for using multiple models.)
 
-(Example: partial pooling / hierarchical model, perhaps the 8 schools example?)
+.pull-left[
+
+**Different variances** (Welch approximation)
+
+
+```r
+t.test(x, y)
+```
+
+`\(t = 7.85\)`
+
+`\(\mathrm{df} = 36.1\)`
+
+`\(\textrm{p-value} = 2.5 \times 10^{-9}\)`
+
+`\(\textrm{95% CI} = (3.00, 5.08)\)`
+
+]
+
+--
+
+.pull-right[
+
+**Pooled variance**
+
+
+```r
+t.test(x, y, var.equal = TRUE)
+```
+
+`\(t = 7.32\)`
+
+`\(\mathrm{df} = 43\)`
+
+`\(\textrm{p-value} = 4.5 \times 10^{-9}\)`
+
+`\(\textrm{95% CI} = (2.93, 5.15)\)`
+
+]
+
+---
+
+# Example: prior sensitivity analysis
+
+![](index_files/figure-html/bayes-sensitivity-1.png)&lt;!-- --&gt;
 
 
 ---
 
-# Suggestions and questions
+# Example: causal inference
 
-(suggest an empirical investigation of whether students do in fact think about
-statistics in terms of the 'true model myth')
+![](images/example-contentious-confounder.png)
 
-(...incl. connect with Ian's talk about 'unreferenced practices')
 
 ---
 
-# Summary
+# 3. Exploring different questions
 
-(Could flash up the 4 reasons here, to act as a summary)
+Some clear examples:
 
-(Can cull this slide if there are too many)
+* Changing the response variable
+* Changing the 'primary' explanatory variables
+
+--
+
+But sometimes it's less clear...
+
+
+---
+
+# Example: ANOVA vs polynomial regression
+
+
+
+.pull-left[
+.center[
+
+![](index_files/figure-html/anova-polynomial-data-1.png)&lt;!-- --&gt;
+
+]
+]
+
+--
+
+.pull-right[
+.center[
+
+![](index_files/figure-html/anova-polynomial-fits-1.png)&lt;!-- --&gt;
+
+]
+]
+
+
+---
+
+# Example: ANOVA vs polynomial regression
+
+.pull-left[
+.center[
+
+![](index_files/figure-html/anova-polynomial-data2-1.png)&lt;!-- --&gt;
+
+]
+]
+
+.pull-right[
+.center[
+
+![](index_files/figure-html/anova-polynomial-fits2-1.png)&lt;!-- --&gt;
+
+]
+]
+
+
+---
+
+# 4. Varying the desired estimation properties
+
+--
+
+Typical trade-off: **bias** vs **variance**
+
+
+---
+
+# Example: ANOVA vs polynomial regression
+
+.pull-left[
+.center[
+
+![](index_files/figure-html/anova-polynomial-data3-1.png)&lt;!-- --&gt;
+
+]
+]
+
+.pull-right[
+.center[
+
+![](index_files/figure-html/anova-polynomial-fits3-1.png)&lt;!-- --&gt;
+
+]
+]
+---
+
+# When teaching students...
+
+Create examples that feature **multiple** models/techniques.
+
+--
+
+Possible reasons for using multiple models:
+
+1. Comparing &amp; optimising performance
+2. Exploring different assumptions
+3. Exploring different questions
+4. Varying the desired estimation properties
+
+--
+
+## Further work
+
+How prevalent is the 'true model myth' amongst students?  
+(Empirical investigation required...)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
