@@ -25,9 +25,9 @@ output:
 
 # Student's predicament
 
-$X_i \sim \mathrm{N}(\mu_1, \sigma_1^2)$
+$X_1, X_2, \dots, X_n \sim \mathrm{N}(\mu_1, \sigma_1^2)$
 
-$Y_j \sim \mathrm{N}(\mu_2, \sigma_2^2)$
+$Y_1, Y_2, \dots, Y_m \sim \mathrm{N}(\mu_2, \sigma_2^2)$
 
 --
 
