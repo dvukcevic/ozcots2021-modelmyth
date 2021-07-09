@@ -91,7 +91,11 @@ A statistical investigation will typically investigate **multiple** models
 
 --
 
-Let's show such examples to students!
+(...and we might never need to choose between them!)
+
+--
+
+Let's show such examples to students.
 
 
 ---
