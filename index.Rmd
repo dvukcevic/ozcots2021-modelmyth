@@ -294,9 +294,7 @@ plotCI(xx0, pp0[, "fit"],
 .pull-left[
 .center[
 
-```{r anova-polynomial-data2, echo = FALSE, fig.width = 8}
-plot(x, y, main = "Data", col = "purple", cex = 1.5, lwd = 2)
-```
+![](`r knitr::fig_chunk('anova-polynomial-data', 'png')`)
 
 ]
 ]
@@ -334,9 +332,7 @@ Typical trade-off: **bias** vs **variance**
 .pull-left[
 .center[
 
-```{r anova-polynomial-data3, echo = FALSE, fig.width = 8}
-plot(x, y, main = "Data", col = "purple", cex = 1.5, lwd = 2)
-```
+![](`r knitr::fig_chunk('anova-polynomial-data', 'png')`)
 
 ]
 ]
@@ -344,15 +340,7 @@ plot(x, y, main = "Data", col = "purple", cex = 1.5, lwd = 2)
 .pull-right[
 .center[
 
-```{r anova-polynomial-fits3, echo = FALSE, fig.width = 8}
-matplot(xx1, pp1, type = "l", lwd = 2, ylim = range(y), col = c(1, 3, 3),
-        xlab = "x", ylab = "y", main = "Model fits")
-plotCI(xx0, pp0[, "fit"],
-       li = pp0[, "lwr"],
-       ui = pp0[, "upr"],
-       add = TRUE, pch = 19, sfrac = 0, gap = 0, col = "blue", lwd = 3,
-       cex = 1.5)
-```
+![](`r knitr::fig_chunk('anova-polynomial-fits2', 'png')`)
 
 ]
 ]
