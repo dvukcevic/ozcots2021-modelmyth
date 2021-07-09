@@ -116,6 +116,10 @@ Let's show such examples to students.
 
 Routinely done for **predictive modelling**
 
+--
+
+...including creating ensembles of **multiple** models
+
 
 ---
 
