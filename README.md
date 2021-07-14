@@ -2,11 +2,17 @@
 
 A conference talk at [OZCOTS 2021][ozcots] given by [Damjan Vukcevic][damjan].
 
-Joint work with Margarita Moreno-Betancur, John Carlin, Sue Finch, Ian Gordon
-and Lyle Gurrin.
+Joint work with [Margarita Moreno-Betancur][margarita], [John Carlin][john],
+[Sue Finch][sue], [Ian Gordon][ian] and [Lyle Gurrin][lyle].
 
 [ozcots]: https://anzsc2021.com.au/ozcots-conference/
 [damjan]: http://damjan.vukcevic.net/
+
+[margarita]: https://moreno-betancur.github.io/
+[john]: https://www.mcri.edu.au/users/professor-john-carlin
+[sue]: https://blogs.unimelb.edu.au/sue-finch/
+[ian]: https://scc.ms.unimelb.edu.au/people/ian-gordon
+[lyle]: https://findanexpert.unimelb.edu.au/profile/23174-lyle-gurrin
 
 
 ## Abstract
