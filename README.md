@@ -32,3 +32,13 @@ exercises that would fit naturally within existing curricula.
 Although this change might seem to complicate teaching, we expect that it will
 actually lead to greater student satisfaction since students will develop
 skills for "scaffolding" problems in the context of real-world questions.
+
+
+## Licence
+
+[![Creative Commons License][cc-img]][cc]  
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0
+International License][cc].
+
+[cc]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-img]: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
